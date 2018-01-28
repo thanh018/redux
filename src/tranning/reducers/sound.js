@@ -1,14 +1,14 @@
 var initialState = {
-    visibilityFilter: {
+    sound: {
         id: 100, 
-        name: 'visible'
+        name: 'sound default'
     }
     
 }
 
 var myReducer = (state = initialState, action) => {
-    if (action.type === 'VISIBLE') {
-        var {id, name} = action.visibilityFilter;
+    if (action.type === 'SOUND') {
+        var {id, name} = action.sound;
         return {id, name} ;
     }
     return state;

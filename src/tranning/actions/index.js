@@ -27,10 +27,12 @@ export const social = (social) => {
     }
 }
 
-export const visibilityFilter = (visibilityFilter) => {
+export const sound = (sound) => {
     return { 
-        type: types.VISIBILITY_FILTER,
-        visibilityFilter: visibilityFilter
+        type: types.SOUND,
+        sound: sound
     }
 }
+
+
 
