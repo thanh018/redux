@@ -1,20 +1,20 @@
-
-
 var initialState = {
     sort: {
-        by: 'name',
+        by: 'Joseph',
         value: 1
     }
 }
 
-var myReducer = (state = initialState, action) => {
-    if(action.type === 'SORT') {
-        var { by, value } = action.sort; // by = action.sort.by
-        return {by, value}
+var reducer = (state = initialState, action) => {
+    switch(action.type) {
+        case 'SORT':
+            var {by, value} = action.sort;
+            return {
+                by, value
+            }
+        default: 
+            return state;
     }
-    
-    return state;
 }
 
-
-export default myReducer;
+export default reducer;

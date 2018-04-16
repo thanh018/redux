@@ -1,15 +1,13 @@
+var initialState = true;
 
-
-var initialState = 1;
-
-var myReducer = (state = initialState, action) => {
-    if(action.type === 'TOGGLE_STATUS') {
-        state = state + 1;
-        return state;
+var reducer = (state = initialState, action) => {
+    switch(action.type) {
+        case 'TOGGLE_STATUS': 
+            state = !state
+            return state;
+        default: 
+            return state;
     }
-    
-    return state;
 }
 
-
-export default myReducer;
+export default reducer;

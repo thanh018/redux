@@ -1,4 +1,4 @@
-import * as types from './../constants/ActionTypes'
+import * as types from './../constants/ActionTypes';
 
 export const status = () => {
     return {
@@ -9,30 +9,28 @@ export const status = () => {
 export const sort = (sort) => {
     return {
         type: types.SORT,
-        sort: sort
+        sort
     }
 }
 
-export const table = (table) => {
+export const addTodo = (text) => {
     return {
-        type: types.TABLE,
-        table: table
+        type: types.ADD_TODO,
+        text
     }
 }
 
-export const social = (social) => {
+export const toggleTodo = (text) => {
     return {
-        type: types.SOCIAL,
-        social: social
+        type: types.TOGGLE_TODO,
+        text
     }
 }
 
-export const sound = (sound) => {
+export const setVisibilityFilter = (filter) => {
     return { 
-        type: types.SOUND,
-        sound: sound
+        type: types.SET_VISIBILITY_FILTER, 
+        filter 
     }
 }
-
-
 

@@ -1,18 +1,16 @@
-import status from './status'; // reducer status
-import sort from './sort'; //reducer sort
-import table from './table'; //reducer TABLE
-import social from './social'; //reducer SOCIAL
-import sound from './sound'; //reducer visibilityFilter
+import status from './status';
+import sort from './sort';
+import todoApp from './todoApp';
+
+
+
 
 import { combineReducers } from 'redux';
 
-const myReducer = combineReducers({
-    status : status,
-    sort: sort,
-    table: table,
-    social: social,
-    sound: sound
 
+export default combineReducers({
+    status,
+    sort,
+    todoApp
 });
 
-export default myReducer;
