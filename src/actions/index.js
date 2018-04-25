@@ -14,16 +14,16 @@ export const addTodo = (todo) => {
     }
 }
 
-export const toggleTodo = (text) => {
+export const toggleTodo = (todo) => {
     return {
         type: types.TOGGLE_TODO,
-        text
+        todo
     }
 }
 
-export const removeTodo = (key) => {
+export const deleteTodo = (todo) => {
     return {
         type: types.REMOVE_TODO,
-        key
+        todo
     }
 }

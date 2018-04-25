@@ -142,7 +142,7 @@ input {
   font-size: 0;
 }
 
-.remove-item {
+.removeBtn {
   float: right;
   position: absolute;
   height: 20px;
@@ -155,7 +155,6 @@ input {
   font-size: 14px;
   line-height: 18px;
   color: red;
-  opacity: 0;
   transition: all .3s ease;
   z-index: 4;
   display: inline-block;
@@ -165,14 +164,12 @@ ul li {
   position: relative;
 }
 
-li:hover .remove-item:hover {
+li:hover .removeBtn:hover {
   background-color: red;
   color: #fff;
 }
 
-li:hover .remove-item {
-  opacity: 1;
-}
+
 
 .item-text {
   display: inline-block;
@@ -180,3 +177,4 @@ li:hover .remove-item {
   width: calc(100% - 20px);
   font-size: 18px;
 }
+

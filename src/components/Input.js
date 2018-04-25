@@ -36,27 +36,9 @@ class Input extends Component {
        
     }
 
-    deleteItem = (key) => {
-        var updateItems = this.state.items.filter(function(item){
-            return (item.key !== key);
-        })
-        
-        this.setState({
-            items: updateItems
-        });
+    
 
-        console.log(updateItems);
-
-        
-    }
-
-    toggleItem = (item , index) => {
-        item.isCompleted ? item.isCompleted = false : item.isCompleted = true;
-        this.setState({
-            items: this.state.items
-        });
-        console.log(this.state.items);
-    }
+    
 
 
     render() {
@@ -93,7 +75,7 @@ const mapDispatchToProps = (dispatch, props) => {
 	return {
 		onAddTodo: (todo) => {
 			dispatch(actions.addTodo(todo));
-		}
+        }
 	}
 }
 
