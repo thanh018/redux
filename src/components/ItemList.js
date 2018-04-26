@@ -24,6 +24,10 @@ class ItemList extends Component {
         
     }
 
+    componentDidMount() {
+        this.props.onFetchData();
+    }
+
     render() {
         console.log(this.props.todos);
         var {todos} = this.props;
@@ -59,13 +63,16 @@ const mapStateToProps = (state) => {
     }
 }
 
-const mapDispatchToProps = (dispatch, props) => {
+const mapDispatchToProps =  (dispatch, props) => {
 	return {
         onToggle: (todo) => {
             dispatch(actions.toggleTodo(todo));
         },
         onDelete: (todo) => {
             dispatch(actions.deleteTodo(todo));
+        },
+        onFetchData: async () => {
+            dispatch(await actions.fetchData());
         }
 	}
 }

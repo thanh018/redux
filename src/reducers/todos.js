@@ -34,13 +34,16 @@ var reducer = (state = initialState, action) => {
 
             });
         case types.REMOVE_TODO:
-            return state.filter(function(todo,){
+            return state.filter(function(todo){
                 return (todo.key !== action.todo.key);
             });
             
             
            
             return [...state];
+        case types.FETCH_DATA:
+            state = action.todo;
+            return [...state] ;
         default: 
             return state;
     }
