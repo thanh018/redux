@@ -6,7 +6,7 @@ class ItemList extends Component {
 
     toggleItem = (todo) => {
         this.props.onToggle(todo);
-        console.log(todo);
+        // console.log(todo);
     }
 
     deleteItem = (todo) => {
@@ -29,7 +29,7 @@ class ItemList extends Component {
     }
 
     render() {
-        console.log(this.props.todos);
+        // console.log(this.props.todos);
         var {todos} = this.props;
         var renderTodo = todos.map((todo, index) => {
             return (
